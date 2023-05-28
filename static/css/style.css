@@ -1,0 +1,114 @@
+@import "button-reset.css";
+@import "index.css";
+
+body {
+  font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 16px;
+  height: 65px;
+  border-bottom: 1px solid var(--lightGray);
+}
+
+.header_menuLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header_menuLeft--icon {
+  cursor: pointer;
+}
+
+.header_title {
+  flex-grow: 2;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.header_menuRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_icon {
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.subscribeLine {
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+main {
+  width: 100%;
+  max-width: var(--game-max-width);
+  margin: 0 auto;
+  height: calc(100% - var(--header-height));
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.board > .row {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.board > .row > div > .key {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--lightGray);
+  margin-left: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.keyboard > .row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  width: 270px;
+}
+
+.keyboard > .row > .key {
+  display: flex;
+  justify-content: center;
+  background-color: var(--lightGray);
+  width: auto;
+  height: 50px;
+  padding: 10px;
+  margin-left: 5px;
+  align-items: center;
+}
