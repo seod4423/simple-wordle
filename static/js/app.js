@@ -42,6 +42,35 @@ const appStart = () => {
         'Z': 80,
     }
 
+    const btnKeyboardIndex = {
+        55: 'A',
+        56: 'B',
+        57: 'C',
+        58: 'D',
+        59: 'E',
+        60: 'F',
+        61: 'G',
+        62: 'H',
+        63: 'I',
+        64: 'J',
+        65: 'K',
+        66: 'L',
+        67: 'M',
+        68: 'N',
+        69: 'O',
+        70: 'P',
+        71: 'Q',
+        72: 'R',
+        73: 'S',
+        74: 'T',
+        75: 'U',
+        76: 'V',
+        77: 'W',
+        78: 'X',
+        79: 'Y',
+        80: 'Z',
+    }
+
     const fillTryBlock = (v, letter, thisBlock) => {
         if (v === letter) thisBlock.style.background = '#6aaa64';
         else if (answer.includes(letter)) thisBlock.style.background = '#c9b458';
@@ -96,7 +125,20 @@ const appStart = () => {
         }
     }
 
+    const handleClick = (e) => {
+        const btnIdx = e.target.dataset.index
+        const key = btnKeyboardIndex[btnIdx];
+        const thisBlock = document.querySelector(`.board > .row > div > .key[data-index='${r}${c}']`)
+        if (btnIdx === '99') return handleEnterKey();
+        else if (c === 5) return;
+        else if (55 <= btnIdx && btnIdx <= 80) {
+            thisBlock.innerHTML = key;
+            c++;
+        }
+    }
+
     window.addEventListener('keydown', handleKeydown);
+    window.addEventListener('click', handleClick);
 }
 
 appStart();
